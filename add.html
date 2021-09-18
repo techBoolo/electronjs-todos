@@ -1,0 +1,22 @@
+<head></head>
+
+<body>
+  <form>
+    <div>
+      <label>enter your todo: </label>
+      <input autofocus />
+    </div>
+    <button type='submit'>Add</button>
+  </form>
+
+  <script>
+
+    document.querySelector('form').addEventListener('submit', (ev) => {
+      ev.preventDefault();
+      const { value } = document.querySelector('input');
+
+      window.todo.sendTodo('todo:add', value) 
+    })
+  </script>
+
+</body>
